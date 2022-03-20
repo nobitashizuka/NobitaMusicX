@@ -22,7 +22,7 @@ def song(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply("𝐅𝐢𝐧𝐝𝐢𝐧𝐠 💫 𝐓𝐡𝐞 𝐒𝐨𝐧𝐠 🎧 𝐅𝐫𝐨𝐦 𝐞𝐒𝐩𝐨𝐫𝐭 ❤️ 𝐒𝐞𝐫𝐯𝐞𝐫 🌎...")
+    m = message.reply("𝐅𝐢𝐧𝐝𝐢𝐧𝐠 💫 𝐓𝐡𝐞 𝐒𝐨𝐧𝐠 🎧 𝐅𝐫𝐨𝐦 N O B I T A ❤️ ＳＨＩＺＵＫＡ 𝐒𝐞𝐫𝐯𝐞𝐫 🌎...")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -45,7 +45,7 @@ def song(client, message):
         )
         print(str(e))
         return
-    m.edit("𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 ✨ 𝐒𝐨𝐧𝐠 🎸 𝐅𝐫𝐨𝐦 𝐞𝐒𝐩𝐨𝐫𝐭 🥀 𝐒𝐞𝐫𝐯𝐞𝐫 🌎...")
+    m.edit("𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 ✨ 𝐒𝐨𝐧𝐠 🎸 𝐅𝐫𝐨𝐦 N O B I T A ❤️ ＳＨＩＺＵＫＡ 🥀 𝐒𝐞𝐫𝐯𝐞𝐫 🌎...")
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
