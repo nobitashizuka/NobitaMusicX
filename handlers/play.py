@@ -106,7 +106,7 @@ async def play(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "Esport_MusicX"
+        user.first_name = "Nobita_MusicX"
     usar = user
     wew = usar.id
     try:
@@ -153,7 +153,7 @@ async def play(_, message: Message):
 
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/a67094fc4a99bca08114b.jpg"
+        thumb_name = "https://te.legra.ph/file/d2f4189ab9cc2b93e1a26.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -163,7 +163,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
-                            url=f"https://t.me/eSport_BOTs")
+                            url=f"https://t.me/Nobita_Supports")
                ],
                [
                     InlineKeyboardButton(
@@ -172,12 +172,12 @@ async def play(_, message: Message):
                             
                     InlineKeyboardButton(
                             text="𝐅𝐞𝐞𝐋𝐢𝐧𝐠'𝐒 🥀",
-                            url=f"https://t.me/Nobita_Feelings")
+                            url=f"https://t.me/Nobita_Ki_Duniya")
                ],
                [
                         InlineKeyboardButton(
                             text="𝐆𝐫𝐨𝐮𝐩⭐",
-                            url=f"https://t.me/EsportClan")
+                            url=f"https://t.me/Nobita_Ki_Duniya")
                    
                 ]
             ]
@@ -216,7 +216,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
-                            url=f"https://t.me/eSport_BOTs")
+                            url=f"https://t.me/Nobita_Supports")
                ],
                [
                     InlineKeyboardButton(
@@ -225,12 +225,12 @@ async def play(_, message: Message):
                             
                     InlineKeyboardButton(
                             text="𝐅𝐞𝐞𝐋𝐢𝐧𝐠'𝐒 🥀",
-                            url=f"https://t.me/NOBITA_Feelings")
+                            url=f"https://t.me/Nobita_Ki_Duniya")
                ],
                [
                         InlineKeyboardButton(
                             text="𝐆𝐫𝐨𝐮𝐩⭐",
-                            url=f"https://t.me/EsportClan")
+                            url=f"https://t.me/Nobita_Ki_Duniya")
                    
                 ]
             ]
@@ -238,7 +238,7 @@ async def play(_, message: Message):
 
         except Exception as e:
             title = "NaN"
-            thumb_name = "https://telegra.ph/file/a67094fc4a99bca08114b.jpg"
+            thumb_name = "https://te.legra.ph/file/d2f4189ab9cc2b93e1a26.jpg"
             duration = "NaN"
             views = "NaN"
             keyboard = InlineKeyboardMarkup(
@@ -246,7 +246,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
-                            url=f"https://t.me/eSport_BOTs")
+                            url=f"https://t.me/Nobita_Supports")
                ],
                [
                     InlineKeyboardButton(
@@ -255,12 +255,12 @@ async def play(_, message: Message):
                             
                     InlineKeyboardButton(
                             text="𝐅𝐞𝐞𝐋𝐢𝐧𝐠'𝐒 🥀",
-                            url=f"https://t.me/NOBITA_Feelings")
+                            url=f"https://t.me/Nobita_Ki_Duniya")
                ],
                [
                         InlineKeyboardButton(
                             text="𝐆𝐫𝐨𝐮𝐩⭐",
-                            url=f"https://t.me/EsportClan")
+                            url=f"https://t.me/Nobita_Ki_Duniya")
                    
                 ]
             ]
@@ -314,7 +314,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                             text="𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
-                            url=f"https://t.me/eSport_BOTs")
+                            url=f"https://t.me/Nobita_Supports")
                ],
                [
                     InlineKeyboardButton(
@@ -323,12 +323,12 @@ async def play(_, message: Message):
                             
                     InlineKeyboardButton(
                             text="𝐅𝐞𝐞𝐋𝐢𝐧𝐠'𝐒 🥀",
-                            url=f"https://t.me/NOBITA_Feelings")
+                            url=f"https://t.me/Nobita_Ki_Duniya")
                ],
                [
                         InlineKeyboardButton(
                             text="𝐆𝐫𝐨𝐮𝐩⭐",
-                            url=f"https://t.me/EsportClan")
+                            url=f"https://t.me/Nobita_Ki_Duniya")
                    
                 ]
             ]
