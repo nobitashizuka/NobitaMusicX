@@ -52,38 +52,32 @@ def changeImageSize(maxWidth, maxHeight, image):
     newImage = image.resize((newWidth, newHeight))
     return newImage
 
-async def generate_cover(requested_by, title, views, duration, thumbnail):
+
+async def generate_cover(thumbnail, title, userid, ctitle):
     async with aiohttp.ClientSession() as session:
         async with session.get(thumbnail) as resp:
             if resp.status == 200:
-                f = await aiofiles.open("background.png", mode="wb")
+                f = await aiofiles.open(f"thumb{userid}.png", mode="wb")
                 await f.write(await resp.read())
                 await f.close()
-
-
-    image1 = Image.open("./background.png")
-    image2 = Image.open("etc/foreground.png")
+    image1 = Image.open(f"thumb{userid}.png")
+    image2 = Image.open("Process/ImageFont/raichux.png")
     image3 = changeImageSize(1280, 720, image1)
     image4 = changeImageSize(1280, 720, image2)
     image5 = image3.convert("RGBA")
     image6 = image4.convert("RGBA")
-    Image.alpha_composite(image5, image6).save("temp.png")
-    img = Image.open("temp.png")
+    Image.alpha_composite(image5, image6).save(f"temp{userid}.png")
+    img = Image.open(f"temp{userid}.png")
     draw = ImageDraw.Draw(img)
-    font = ImageFont.truetype("etc/font.otf", 32)
-    draw.text((190, 550), f"Title: {title}", (255, 255, 255), font=font)
-    draw.text(
-(190, 590), f"Duration: {duration}", (255, 255, 255), font=font
-    )
-    draw.text((190, 630), f"Views: {views}", (255, 255, 255), font=font)
-    draw.text((190, 670),
- f"Added By: {requested_by}",
- (255, 255, 255),
- font=font,
-    )
-    img.save("final.png")
-    os.remove("temp.png")
-    os.remove("background.png")
+    font = ImageFont.truetype("Process/ImageFont/finalfont.ttf", 60)
+    font2 = ImageFont.truetype("Process/ImageFont/finalfont.ttf", 70)     
+    draw.text((20, 45), f"{title[:30]}...", fill= "white", stroke_width = 1, stroke_fill="white", font=font2)
+    draw.text((120, 595), f"Playing on: {ctitle[:20]}...", fill="white", stroke_width = 1, stroke_fill="white" ,font=font)
+    img.save(f"final{userid}.png")
+    os.remove(f"temp{userid}.png")
+    os.remove(f"thumb{userid}.png") 
+    final = f"final{userid}.png"
+    return final
 
 
 
